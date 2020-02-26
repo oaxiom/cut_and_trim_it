@@ -100,7 +100,7 @@ if __name__ == '__main__':
                 qual2 = qual2[0:p]
                 counts[k] += 1
 
-        if len(seq1) < 50 and len(seq2) < 50:
+        if len(seq1) < 50 or len(seq2) < 50:
             counts['rejected_reads'] += 1
         else:
             p1.write('{0}\n{1}\n+\n{2}\n'.format(read[0]['name'], seq1, qual1))
